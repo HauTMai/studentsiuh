@@ -8,6 +8,32 @@
   <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
   <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
 </head>
+ <!-- ===== FIX MENU: 6 tab nằm 1 hàng ===== -->
+  <style>
+    #menubar #menu{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      display: flex;
+      flex-wrap: nowrap;      /* không cho rớt xuống dòng */
+      width: 100%;
+    }
+
+    #menubar #menu li{
+      flex: 1 1 0;            /* chia đều 6 tab */
+      float: none !important; /* nếu CSS cũ đang float */
+    }
+
+    #menubar #menu li a{
+      display: block;
+      text-align: center;
+      white-space: nowrap;    /* chữ trong tab không xuống dòng */
+      padding: 14px 6px;      /* giảm padding ngang để khỏi tràn */
+      font-size: 13px;        /* nếu vẫn chật: đổi 12px */
+    }
+  </style>
+</head>
 
 <body>
   <div id="main">
